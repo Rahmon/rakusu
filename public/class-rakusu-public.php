@@ -96,7 +96,9 @@ class Rakusu_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/rakusu-public.js', array( 'jquery' ), $this->version, false );
+		if ( is_singular( 'post' ) ) {
+			wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/rakusu-public.js', array( 'jquery' ), $this->version, false );
+		}
 
 	}
 
