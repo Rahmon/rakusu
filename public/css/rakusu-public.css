@@ -2,3 +2,9 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
+
+ #rakusu-social-share {
+   position: fixed;
+   top: 150px;
+   left: 300px;
+ }
