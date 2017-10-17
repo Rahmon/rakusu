@@ -29,7 +29,7 @@
 	 * practising this, we should strive to set a better example in our own work.
 	 */
 	 $( window ).load(function() {
-		 $( 'body' ).append( '<div id="rakusu-social-share"><h5>Share</h5><h6>Twitter</h6><h6>Facebook</h6></div>');
+		 $( 'body' ).append( '<div id="rakusu-social-share"><h5>Share</h5><h6><a href="https://twitter.com/intent/tweet?text=anatta">Twitter</a></h6><h6><a href="#">Facebook</a></h6></div>');
 	 });
 
 })( jQuery );
