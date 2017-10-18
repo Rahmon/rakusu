@@ -4,9 +4,28 @@
  */
 
 #rakusu-social-share {
-  position: fixed;
-  top: 150px;
-  left: 300px;
+    display: none;
+}
+
+@media(min-width: 60rem) {
+  #rakusu-social-share {
+    display: block;
+    position: fixed;
+    top: 150px;
+    left: 65px;
+  }
+}
+
+@media(min-width: 75rem) {
+  #rakusu-social-share {
+    left: 225px;
+  }
+}
+
+@media(min-width: 85rem) {
+  #rakusu-social-share {
+    left: 350px;
+  }
 }
 
 #rakusu-social-share h6 {
