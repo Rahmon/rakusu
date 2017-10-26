@@ -102,4 +102,22 @@ class Rakusu_Public {
 
 	}
 
+	public function add_social_share( $content ) {
+		if ( is_singular( 'post' ) ) {
+			$social_share_element = '<div id="rakusu-social-share">
+				<div>
+					<h5>Share</h5>
+					<h6>
+						<a href="https://twitter.com/intent/tweet?text=anatta">Twitter</a>
+					</h6>
+					<h6>
+						<a href="#">Facebook</a>
+					</h6>
+				</div>
+			</div>';
+
+			return $content . $social_share_element;
+		}
+	}
+
 }
