@@ -31,6 +31,10 @@
     position: fixed;
   }
 
+  #rakusu-social-share div h5::after {
+    content: '';
+  }
+
   #rakusu-social-share div h6 {
     float: none;
     margin-top: 1em;
