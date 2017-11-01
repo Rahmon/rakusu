@@ -41,6 +41,8 @@
     position: relative;
     bottom: 5rem;
     left: -10rem;
+    opacity: 0;
+    transition: opacity .3s 0s;
   }
 
   #rakusu-social-share div {

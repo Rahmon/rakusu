@@ -29,4 +29,8 @@
 	 * practising this, we should strive to set a better example in our own work.
 	 */
 
+	 $( document ).scroll( function() {
+		 	$( '#rakusu-social-share' ).css( { opacity: $( this ).scrollTop() > 80 ? "1" : "0" } );
+	 });
+
 })( jQuery );
