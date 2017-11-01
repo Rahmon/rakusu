@@ -116,7 +116,19 @@ class Rakusu_Public {
 				</div>
 			</div>';
 
-			return $content . $social_share_element;
+			$social_share_bottom_element = '<div id="rakusu-social-share-bottom">
+				<div>
+					<h5>Share</h5>
+					<h6>
+						<a href="https://twitter.com/intent/tweet?text=anatta">Twitter</a>
+					</h6>
+					<h6>
+						<a href="#">Facebook</a>
+					</h6>
+				</div>
+			</div>';
+
+			return $social_share_element . $content . $social_share_bottom_element;
 		}
 	}
 

@@ -3,27 +3,43 @@
  * included in this file.
  */
 
-#rakusu-social-share,
-#rakusu-social-share div {
+ #rakusu-social-share-bottom {
+   display: block;
+ }
+
+#rakusu-social-share-bottom,
+#rakusu-social-share-bottom div {
     position: static;
 }
 
-#rakusu-social-share div h5::after {
+#rakusu-social-share-bottom div {
+  overflow: auto;
+}
+
+#rakusu-social-share-bottom div h5::after {
   content: ':';
 }
 
-#rakusu-social-share div h6 {
+#rakusu-social-share-bottom div h6 {
   float: left;
   margin-top: .5em;
   margin-right: 1em;
   font-size: .8em;
 }
 
+#rakusu-social-share {
+  display: none;
+}
+
 @media(min-width: 65rem) {
+  #rakusu-social-share-bottom {
+    display: none;
+  }
+
   #rakusu-social-share {
     display: block;
     position: relative;
-    top: -10rem;
+    bottom: 5rem;
     left: -10rem;
   }
 
@@ -39,5 +55,6 @@
     float: none;
     margin-top: 1em;
     margin-right: 0;
+    font-size: .8em;
   }
 }
