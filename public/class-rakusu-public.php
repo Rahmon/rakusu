@@ -104,11 +104,14 @@ class Rakusu_Public {
 
 	public function add_social_share( $content ) {
 		if ( is_singular( 'post' ) ) {
+			$text = get_the_title();
+			$url = get_permalink();
+			$twitter_share_url = "https://twitter.com/intent/tweet?" . "text=" . $text . '&url=' . $url;
 			$social_share_element = '<div id="rakusu-social-share">
 				<div>
 					<h5>Share</h5>
 					<h6>
-						<a href="https://twitter.com/intent/tweet?text=anatta">Twitter</a>
+						<a href="' . $twitter_share_url . '">Twitter</a>
 					</h6>
 					<h6>
 						<a href="#">Facebook</a>
