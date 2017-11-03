@@ -107,6 +107,9 @@ class Rakusu_Public {
 			$text = get_the_title();
 			$url = get_permalink();
 			$twitter_share_url = "https://twitter.com/intent/tweet?" . "text=" . $text . '&url=' . $url;
+
+			$facebook_share_url = 'https://www.facebook.com/sharer/sharer.php?u=' . $url;
+
 			$social_share_element = '<div id="rakusu-social-share">
 				<div>
 					<h5>Share</h5>
@@ -114,7 +117,7 @@ class Rakusu_Public {
 						<a href="' . $twitter_share_url . '">Twitter</a>
 					</h6>
 					<h6>
-						<a href="#">Facebook</a>
+						<a href="' . $facebook_share_url . '">Facebook</a>
 					</h6>
 				</div>
 			</div>';
