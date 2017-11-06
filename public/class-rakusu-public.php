@@ -106,35 +106,26 @@ class Rakusu_Public {
 		if ( is_singular( 'post' ) ) {
 			$text = get_the_title();
 			$url = get_permalink();
-			$twitter_share_url = "https://twitter.com/intent/tweet?" . "text=" . $text . '&url=' . $url;
+			$twitter_share_url = 'https://twitter.com/intent/tweet?' . 'text=' . $text . '&url=' . $url;
 
 			$facebook_share_url = 'https://www.facebook.com/sharer/sharer.php?u=' . $url;
 
-			$social_share_element = '<div id="rakusu-social-share">
-				<div>
-					<h5>Share</h5>
-					<h6>
-						<a href="' . $twitter_share_url . '">Twitter</a>
-					</h6>
-					<h6>
-						<a href="' . $facebook_share_url . '">Facebook</a>
-					</h6>
-				</div>
-			</div>';
+			$social_share_element = '<div>
+																<h5>Share</h5>
+																<h6>
+																	<a href="' . $twitter_share_url . '">Twitter</a>
+																</h6>
+																<h6>
+																	<a href="' . $facebook_share_url . '">Facebook</a>
+																</h6>
+															</div>';
 
-			$social_share_bottom_element = '<div id="rakusu-social-share-bottom">
-				<div>
-					<h5>Share</h5>
-					<h6>
-						<a href="https://twitter.com/intent/tweet?text=anatta">Twitter</a>
-					</h6>
-					<h6>
-						<a href="#">Facebook</a>
-					</h6>
-				</div>
-			</div>';
+			$social_share_side = '<div id="rakusu-social-share">' . $social_share_element . '</div>';
+			$social_share_bottom = '<div id="rakusu-social-share-bottom">' . $social_share_element . '</div>';
 
-			return $social_share_element . $content . $social_share_bottom_element;
+			return $social_share_side . $content . $social_share_bottom;
+		} else {
+			return $content;
 		}
 	}
 
